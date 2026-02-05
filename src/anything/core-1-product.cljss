@@ -1,0 +1,111 @@
+(ns ^:figwheel-hooks anything.core
+  (:require
+   [re-frame.core :as rf]
+   #_[re-frame.alpha :as rf]
+   [reagent.dom :as rdom] 
+   [re-com.core :refer [v-box h-box box gap button title alert-box
+                        scroller label input-text single-dropdown]]))
+
+(rf/reg-event-db              ;; sets up initial application state
+ :initialize                 ;; usage:  (dispatch [:initialize])
+ (fn [_ _]                   ;; the two parameters are not important here, so use _
+   (let [db {:bremen
+             {:street "invoice street"
+              :streetNo 4711
+              :city-name "Bremen"     
+              :city-code 28}
+             :jack-cust
+             {:first-name "Jack"
+              :last-name  "Cust"          
+              :company    "JC"}
+             :products
+             {:product1
+              {:description "Product1"
+               :amount 5
+               :price 3
+               #_:total #_(* (:amount (:product1 (:products db)))
+                             (:price (:product1 (:products db)))) 
+               }}}] 
+     db)))
+
+(rf/reg-event-db             
+ :product1-amount-change       
+ (fn [db [_ new-value]]  ;; -db event handlers given 2 parameters:  current application state and event (a vector)
+   (assoc-in db [:products :product1 :amount] new-value)))
+
+(rf/reg-event-db             
+ :product1-price-change       
+ (fn [db [_ new-value]]  ;; -db event handlers given 2 parameters:  current application state and event (a vector)
+   (assoc-in db [:products :product1 :price] new-value)))
+
+(rf/reg-sub 
+ :products 
+ (fn [db _] 
+   (:products db)))
+
+(rf/reg-sub 
+ :product1
+ (fn [db _]
+   (:product1 (:products db))))
+
+(rf/reg-sub
+ :amount
+ (fn [db _]
+   (:amount (:product1 (:products db)))))
+
+(rf/reg-sub
+ :total
+ (fn [db _]
+   #_(:total (:product1 (:products db)))
+   (* (:amount (:product1 (:products db)))
+      (:price  (:product1 (:products db))))))
+
+(defn product
+  [product]
+  (let [p @(rf/subscribe [product :products])
+        gettext (fn [e] (js/parseInt e))
+        emit-amount #(rf/dispatch [:product1-amount-change (gettext %)])
+        emit-price  #(rf/dispatch [:product1-price-change (gettext %)])
+        t (* (:amount p)
+             (:price  p))
+        _ (println  t)] 
+    [v-box
+     :children [[h-box :children [[box :size "125px" :child "Description: "]
+                                  (:description p)]]
+                [h-box :children [[box :size "125px" :child "Amount: "]
+                                  [input-text :model (str (:amount p))
+                                   :on-change emit-amount
+                                   :change-on-blur? false
+                                   :validation-regex  #"^[-+]?[0-9]*$"
+                                   :attr {:type "number"}
+                                   :style {:background-color "beige"}]
+                                  ]]
+                [h-box :children [[box :size "125px" :child "Price: "]
+                                  [input-text :model (str (:price p))
+                                   :on-change emit-price
+                                   :change-on-blur? false
+                                   :validation-regex  #"^[-+]?[0-9]*$"
+                                   :attr {:type "number"}
+                                   :style {:background-color "beige"}]
+                                  ]]
+                [h-box :children [[box :size "125px" :child "Total: "] t]]]]))
+
+(defn ui []
+  (let [p @(rf/subscribe [:product1 :products])]
+    [v-box :children
+     [[:h1 "Anything-Beispiel aus P-Schrift"]
+      [box :child (product :product1)]]]    
+    ))
+
+(defn ^:export main     ;; call this to bootstrap your app
+  []
+  (rf/dispatch-sync [:initialize])
+  (rdom/render [ui]
+               (js/document.getElementById "app")))
+
+;; and this is what figwheel calls after each save
+(defn ^:after-load re-render []
+  (main))
+
+;; this only gets called once
+(defonce start-up (do (main) (js/console.log @re-frame.db/app-db) true)) 

@@ -1,0 +1,60 @@
+(ns ^:figwheel-hooks anything.core
+  (:require
+   #_[re-frame.core :as rf]
+   [re-frame.alpha :as rf]
+   [reagent.dom :as rdc]))
+
+(rf/reg-sub      :width  (fn [db [_ room]]    (get-in db [room :width])))
+(rf/reg-sub      :length (fn [db [_ room]]    (get-in db [room :length])))
+(rf/reg-event-db :inc-w  (fn [db [_ room]] (update-in db [room :width] inc)))
+(rf/reg-event-db :inc-h  (fn [db [_ room]] (update-in db [room :length] inc)))
+(rf/reg-event-db :init   (fn [db [_ room]] (-> db
+                                               (update :kitchen merge {:width 10 :length 15})
+                                               (update :garage merge {:width 20 :length 20}))))
+
+(def clickable
+  {:cursor "pointer" :border "2px solid grey" :user-select "none"})
+
+(defn room-form [room]
+  [:form
+   [:h4 room " calculator"]
+   "width:"
+   @(rf/subscribe [:width room])
+   [:span {:style clickable
+           :on-click #(rf/dispatch [:inc-w room])} "+"]
+   [:br]
+   "length:"
+   @(rf/subscribe [:length room])
+   [:span {:style clickable
+           :on-click #(rf/dispatch [:inc-h room])} "+"]])
+
+(rf/reg-flow
+ {:id     :garage-area
+  :inputs {:w [:garage :width]
+           :h [:garage :length]}
+  :output (fn [{:keys [w h]}] (* w h))
+  :path   [:garage :area]})
+
+(rf/reg-sub
+ :area
+ (fn [db [_ room]] (get-in db [room :area])))
+
+(defn app-container [& children]
+  (into [:div {:style {:padding "1rem"
+                       :border  "2px solid grey"}}]
+        children))
+
+(defn room-calculator [room]
+  [:div
+   [room-form room]
+   " Area:"
+   @(rf/subscribe [:area room])])  ;;  <--- subscribing
+
+(rf/dispatch-sync [:init])
+
+(defonce garage-calculator-root
+  (rdc/create-root (js/document.getElementById "garage-calculator")))
+
+(rdc/render garage-calculator-root
+            [app-container [room-calculator :garage]])
+
