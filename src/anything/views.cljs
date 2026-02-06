@@ -5,7 +5,13 @@
             [re-com.core :refer [v-box h-box box gap button title alert-box hyperlink
                                  scroller label input-text single-dropdown]]))
 
-(defn product 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Diese Funktionen realisieren die Benutzungsoberflache, indem sie mithilfe von Reagent
+;; HTML generieren. Außerdem werden hier mithilfe von subscribe's die Abhängigkeiten von
+;; Änderungen von Daten definiert.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn product
   []
   (let [sp @(rf/subscribe [:selected-product])
         p (sp @(rf/subscribe [:products]))
