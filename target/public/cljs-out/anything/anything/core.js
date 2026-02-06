@@ -2,12 +2,10 @@
 goog.provide('anything.core');
 goog.require('cljs.core');
 goog.require('re_frame.core');
-goog.require('anything.db');
 goog.require('anything.views');
 goog.require('anything.events');
 goog.require('anything.subs');
 goog.require('reagent.dom');
-goog.require('re_com.core');
 anything.core.main = (function anything$core$main(){
 re_frame.core.dispatch_sync.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"initialize","initialize",609952913)], null));
 

@@ -2,13 +2,10 @@
   (:require
    [re-frame.core :as rf]
    #_[re-frame.alpha :as rf] 
-   [anything.db :as db]
    [anything.views :as av]
    [anything.events]
    [anything.subs]
-   [reagent.dom :as rdom] 
-   [re-com.core :refer [v-box h-box box gap button title alert-box hyperlink
-                        scroller label input-text single-dropdown ]]))
+   [reagent.dom :as rdom]))
 
 (defn ^:export main     ;; call this to bootstrap your app
   [] 

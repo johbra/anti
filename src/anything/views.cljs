@@ -1,6 +1,5 @@
 (ns anything.views
-  (:require [re-frame.core :as rf]
-            [reagent.core :as reagent]
+  (:require [re-frame.core :as rf] 
             [anything.subs]
             [anything.events] 
             [re-com.core :refer [v-box h-box box gap button title alert-box hyperlink
@@ -56,9 +55,7 @@
                       [hyperlink :style {:color "blue"}
                        :label (:city-name (:address cust))
                        :on-click #(rf/dispatch
-                                   [:selected-cust-address (:address cust)])]]]
-    #_[h-box :children [[box :size "80px" :child "city-name: "] (:city-name cust)]]
-    #_[h-box :children [[box :size "80px" :child "city-code: "] (:city-code cust)]]]]
+                                   [:selected-cust-address (:address cust)])]]]]]
   )
 
 (defn customer-address
@@ -71,8 +68,7 @@
 
 (defn invoice
   [inv]
-  (let [prodcts @(rf/subscribe [:products])
-        invoice-key @(rf/subscribe [:selected-invoice])
+  (let [invoice-key @(rf/subscribe [:selected-invoice])
         sum (reduce + 0 (map #(* (:amount %) (:price %)) (vals (:items inv))))
         _ (rf/dispatch [:invoice-sum invoice-key  (str sum)])
         _ (rf/dispatch [:invoice-vat invoice-key
@@ -99,7 +95,7 @@
          :children 
          [[label :label "items:"]
           [v-box :children
-           (vec (for [[k v] (:items inv)]
+           (vec (for [[k _] (:items inv)]
                   [hyperlink :style {:color "blue"}
                    :label k
                    :on-click #(rf/dispatch [:selected-product k])]))]]])
