@@ -39,14 +39,14 @@ return goog.log.log.call(null,log,figwheel.repl.logging.LogLevel.FINEST,msg);
 figwheel.repl.logging.console_logging = (function figwheel$repl$logging$console_logging(){
 if(cljs.core.truth_(figwheel.repl.logging.goog$module$goog$object.get.call(null,goog.debug.Console,"instance"))){
 } else {
-var c_27095 = (new goog.debug.Console());
-var G__27094_27096 = c_27095.getFormatter();
-figwheel.repl.logging.goog$module$goog$object.set.call(null,G__27094_27096,"showAbsoluteTime",false);
+var c_27101 = (new goog.debug.Console());
+var G__27100_27102 = c_27101.getFormatter();
+figwheel.repl.logging.goog$module$goog$object.set.call(null,G__27100_27102,"showAbsoluteTime",false);
 
-figwheel.repl.logging.goog$module$goog$object.set.call(null,G__27094_27096,"showRelativeTime",false);
+figwheel.repl.logging.goog$module$goog$object.set.call(null,G__27100_27102,"showRelativeTime",false);
 
 
-figwheel.repl.logging.goog$module$goog$object.set.call(null,goog.debug.Console,"instance",c_27095);
+figwheel.repl.logging.goog$module$goog$object.set.call(null,goog.debug.Console,"instance",c_27101);
 
 }
 
@@ -60,8 +60,8 @@ return true;
 return null;
 }
 });
-figwheel.repl.logging.log_levels = cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,cljs.core.juxt.call(null,clojure.string.lower_case,(function (p1__27097_SHARP_){
-return figwheel.repl.logging.goog$module$goog$object.get.call(null,figwheel.repl.logging.LogLevel,p1__27097_SHARP_);
+figwheel.repl.logging.log_levels = cljs.core.into.call(null,cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.call(null,cljs.core.juxt.call(null,clojure.string.lower_case,(function (p1__27103_SHARP_){
+return figwheel.repl.logging.goog$module$goog$object.get.call(null,figwheel.repl.logging.LogLevel,p1__27103_SHARP_);
 })),cljs.core.map.call(null,cljs.core.str,cljs.core.list(new cljs.core.Symbol(null,"SEVERE","SEVERE",2038088045,null),new cljs.core.Symbol(null,"WARNING","WARNING",1233939303,null),new cljs.core.Symbol(null,"INFO","INFO",578874437,null),new cljs.core.Symbol(null,"CONFIG","CONFIG",1613043737,null),new cljs.core.Symbol(null,"FINE","FINE",1120074650,null),new cljs.core.Symbol(null,"FINER","FINER",1219697631,null),new cljs.core.Symbol(null,"FINEST","FINEST",-1116440228,null)))));
 figwheel.repl.logging.set_log_level = (function figwheel$repl$logging$set_log_level(logger_SINGLEQUOTE_,level){
 var temp__5823__auto__ = cljs.core.get.call(null,figwheel.repl.logging.log_levels,level);

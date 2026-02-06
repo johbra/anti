@@ -15,14 +15,14 @@ re_com.slider.slider_args_desc = ((re_com.config.include_args_desc_QMARK_)?new c
  */
 re_com.slider.slider = (function re_com$slider$slider(var_args){
 var args__5775__auto__ = [];
-var len__5769__auto___19320 = arguments.length;
-var i__5770__auto___19321 = (0);
+var len__5769__auto___19766 = arguments.length;
+var i__5770__auto___19767 = (0);
 while(true){
-if((i__5770__auto___19321 < len__5769__auto___19320)){
-args__5775__auto__.push((arguments[i__5770__auto___19321]));
+if((i__5770__auto___19767 < len__5769__auto___19766)){
+args__5775__auto__.push((arguments[i__5770__auto___19767]));
 
-var G__19322 = (i__5770__auto___19321 + (1));
-i__5770__auto___19321 = G__19322;
+var G__19768 = (i__5770__auto___19767 + (1));
+i__5770__auto___19767 = G__19768;
 continue;
 } else {
 }
@@ -33,23 +33,23 @@ var argseq__5776__auto__ = ((((0) < args__5775__auto__.length))?(new cljs.core.I
 return re_com.slider.slider.cljs$core$IFn$_invoke$arity$variadic(argseq__5776__auto__);
 });
 
-(re_com.slider.slider.cljs$core$IFn$_invoke$arity$variadic = (function (p__19318){
-var map__19319 = p__19318;
-var map__19319__$1 = cljs.core.__destructure_map.call(null,map__19319);
-var args = map__19319__$1;
-var disabled_QMARK_ = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
-var on_change = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
-var step = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"step","step",1288888124));
-var model = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"model","model",331153215));
-var attr = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
-var min = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"min","min",444991522),(0));
-var parts = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"parts","parts",849007691));
-var width = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"width","width",-384071477));
-var src = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"src","src",-1651076051));
-var style = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"style","style",-496642736));
-var debug_as = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"debug-as","debug-as",283322354));
-var class$ = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
-var max = cljs.core.get.call(null,map__19319__$1,new cljs.core.Keyword(null,"max","max",61366548),(100));
+(re_com.slider.slider.cljs$core$IFn$_invoke$arity$variadic = (function (p__19764){
+var map__19765 = p__19764;
+var map__19765__$1 = cljs.core.__destructure_map.call(null,map__19765);
+var args = map__19765__$1;
+var disabled_QMARK_ = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
+var on_change = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
+var step = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"step","step",1288888124));
+var model = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"model","model",331153215));
+var attr = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
+var min = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"min","min",444991522),(0));
+var parts = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"parts","parts",849007691));
+var width = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"width","width",-384071477));
+var src = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"src","src",-1651076051));
+var style = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"style","style",-496642736));
+var debug_as = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"debug-as","debug-as",283322354));
+var class$ = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
+var max = cljs.core.get.call(null,map__19765__$1,new cljs.core.Keyword(null,"max","max",61366548),(100));
 var or__5045__auto__ = (((!(goog.DEBUG)))?null:re_com.validate.validate_args.call(null,re_com.validate.extract_arg_data.call(null,re_com.slider.slider_args_desc),args));
 if(cljs.core.truth_(or__5045__auto__)){
 return or__5045__auto__;
@@ -82,9 +82,9 @@ return null;
 (re_com.slider.slider.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(re_com.slider.slider.cljs$lang$applyTo = (function (seq19317){
+(re_com.slider.slider.cljs$lang$applyTo = (function (seq19763){
 var self__5755__auto__ = this;
-return self__5755__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19317));
+return self__5755__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19763));
 }));
 
 

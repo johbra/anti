@@ -15,14 +15,14 @@ re_com.radio_button.radio_button_args_desc = ((re_com.config.include_args_desc_Q
  */
 re_com.radio_button.radio_button = (function re_com$radio_button$radio_button(var_args){
 var args__5775__auto__ = [];
-var len__5769__auto___23814 = arguments.length;
-var i__5770__auto___23815 = (0);
+var len__5769__auto___24260 = arguments.length;
+var i__5770__auto___24261 = (0);
 while(true){
-if((i__5770__auto___23815 < len__5769__auto___23814)){
-args__5775__auto__.push((arguments[i__5770__auto___23815]));
+if((i__5770__auto___24261 < len__5769__auto___24260)){
+args__5775__auto__.push((arguments[i__5770__auto___24261]));
 
-var G__23816 = (i__5770__auto___23815 + (1));
-i__5770__auto___23815 = G__23816;
+var G__24262 = (i__5770__auto___24261 + (1));
+i__5770__auto___24261 = G__24262;
 continue;
 } else {
 }
@@ -33,23 +33,23 @@ var argseq__5776__auto__ = ((((0) < args__5775__auto__.length))?(new cljs.core.I
 return re_com.radio_button.radio_button.cljs$core$IFn$_invoke$arity$variadic(argseq__5776__auto__);
 });
 
-(re_com.radio_button.radio_button.cljs$core$IFn$_invoke$arity$variadic = (function (p__23812){
-var map__23813 = p__23812;
-var map__23813__$1 = cljs.core.__destructure_map.call(null,map__23813);
-var args = map__23813__$1;
-var disabled_QMARK_ = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
-var on_change = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
-var label_class = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"label-class","label-class",-2068991202));
-var model = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"model","model",331153215));
-var attr = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
-var value = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"value","value",305978217));
-var parts = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"parts","parts",849007691));
-var src = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"src","src",-1651076051));
-var style = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"style","style",-496642736));
-var debug_as = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"debug-as","debug-as",283322354));
-var label = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"label","label",1718410804));
-var class$ = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
-var label_style = cljs.core.get.call(null,map__23813__$1,new cljs.core.Keyword(null,"label-style","label-style",-1703650121));
+(re_com.radio_button.radio_button.cljs$core$IFn$_invoke$arity$variadic = (function (p__24258){
+var map__24259 = p__24258;
+var map__24259__$1 = cljs.core.__destructure_map.call(null,map__24259);
+var args = map__24259__$1;
+var disabled_QMARK_ = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"disabled?","disabled?",-1523234181));
+var on_change = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"on-change","on-change",-732046149));
+var label_class = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"label-class","label-class",-2068991202));
+var model = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"model","model",331153215));
+var attr = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
+var value = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"value","value",305978217));
+var parts = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"parts","parts",849007691));
+var src = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"src","src",-1651076051));
+var style = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"style","style",-496642736));
+var debug_as = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"debug-as","debug-as",283322354));
+var label = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"label","label",1718410804));
+var class$ = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
+var label_style = cljs.core.get.call(null,map__24259__$1,new cljs.core.Keyword(null,"label-style","label-style",-1703650121));
 var or__5045__auto__ = (((!(goog.DEBUG)))?null:re_com.validate.validate_args.call(null,re_com.validate.extract_arg_data.call(null,re_com.radio_button.radio_button_args_desc),args));
 if(cljs.core.truth_(or__5045__auto__)){
 return or__5045__auto__;
@@ -91,9 +91,9 @@ return null;
 (re_com.radio_button.radio_button.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(re_com.radio_button.radio_button.cljs$lang$applyTo = (function (seq23811){
+(re_com.radio_button.radio_button.cljs$lang$applyTo = (function (seq24257){
 var self__5755__auto__ = this;
-return self__5755__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq23811));
+return self__5755__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq24257));
 }));
 
 

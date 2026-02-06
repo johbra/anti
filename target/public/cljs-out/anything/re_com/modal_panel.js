@@ -15,14 +15,14 @@ re_com.modal_panel.modal_panel_args_desc = ((re_com.config.include_args_desc_QMA
  */
 re_com.modal_panel.modal_panel = (function re_com$modal_panel$modal_panel(var_args){
 var args__5775__auto__ = [];
-var len__5769__auto___23948 = arguments.length;
-var i__5770__auto___23949 = (0);
+var len__5769__auto___24394 = arguments.length;
+var i__5770__auto___24395 = (0);
 while(true){
-if((i__5770__auto___23949 < len__5769__auto___23948)){
-args__5775__auto__.push((arguments[i__5770__auto___23949]));
+if((i__5770__auto___24395 < len__5769__auto___24394)){
+args__5775__auto__.push((arguments[i__5770__auto___24395]));
 
-var G__23950 = (i__5770__auto___23949 + (1));
-i__5770__auto___23949 = G__23950;
+var G__24396 = (i__5770__auto___24395 + (1));
+i__5770__auto___24395 = G__24396;
 continue;
 } else {
 }
@@ -33,19 +33,19 @@ var argseq__5776__auto__ = ((((0) < args__5775__auto__.length))?(new cljs.core.I
 return re_com.modal_panel.modal_panel.cljs$core$IFn$_invoke$arity$variadic(argseq__5776__auto__);
 });
 
-(re_com.modal_panel.modal_panel.cljs$core$IFn$_invoke$arity$variadic = (function (p__23946){
-var map__23947 = p__23946;
-var map__23947__$1 = cljs.core.__destructure_map.call(null,map__23947);
-var args = map__23947__$1;
-var child = cljs.core.get.call(null,map__23947__$1,new cljs.core.Keyword(null,"child","child",623967545));
-var attr = cljs.core.get.call(null,map__23947__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
-var wrap_nicely_QMARK_ = cljs.core.get.call(null,map__23947__$1,new cljs.core.Keyword(null,"wrap-nicely?","wrap-nicely?",85012288),true);
-var backdrop_opacity = cljs.core.get.call(null,map__23947__$1,new cljs.core.Keyword(null,"backdrop-opacity","backdrop-opacity",1467395653),0.6);
-var parts = cljs.core.get.call(null,map__23947__$1,new cljs.core.Keyword(null,"parts","parts",849007691));
-var backdrop_color = cljs.core.get.call(null,map__23947__$1,new cljs.core.Keyword(null,"backdrop-color","backdrop-color",1921200717),"black");
-var style = cljs.core.get.call(null,map__23947__$1,new cljs.core.Keyword(null,"style","style",-496642736));
-var class$ = cljs.core.get.call(null,map__23947__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
-var backdrop_on_click = cljs.core.get.call(null,map__23947__$1,new cljs.core.Keyword(null,"backdrop-on-click","backdrop-on-click",-1460240426));
+(re_com.modal_panel.modal_panel.cljs$core$IFn$_invoke$arity$variadic = (function (p__24392){
+var map__24393 = p__24392;
+var map__24393__$1 = cljs.core.__destructure_map.call(null,map__24393);
+var args = map__24393__$1;
+var child = cljs.core.get.call(null,map__24393__$1,new cljs.core.Keyword(null,"child","child",623967545));
+var attr = cljs.core.get.call(null,map__24393__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
+var wrap_nicely_QMARK_ = cljs.core.get.call(null,map__24393__$1,new cljs.core.Keyword(null,"wrap-nicely?","wrap-nicely?",85012288),true);
+var backdrop_opacity = cljs.core.get.call(null,map__24393__$1,new cljs.core.Keyword(null,"backdrop-opacity","backdrop-opacity",1467395653),0.6);
+var parts = cljs.core.get.call(null,map__24393__$1,new cljs.core.Keyword(null,"parts","parts",849007691));
+var backdrop_color = cljs.core.get.call(null,map__24393__$1,new cljs.core.Keyword(null,"backdrop-color","backdrop-color",1921200717),"black");
+var style = cljs.core.get.call(null,map__24393__$1,new cljs.core.Keyword(null,"style","style",-496642736));
+var class$ = cljs.core.get.call(null,map__24393__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
+var backdrop_on_click = cljs.core.get.call(null,map__24393__$1,new cljs.core.Keyword(null,"backdrop-on-click","backdrop-on-click",-1460240426));
 var or__5045__auto__ = (((!(goog.DEBUG)))?null:re_com.validate.validate_args.call(null,re_com.validate.extract_arg_data.call(null,re_com.modal_panel.modal_panel_args_desc),args));
 if(cljs.core.truth_(or__5045__auto__)){
 return or__5045__auto__;
@@ -68,9 +68,9 @@ return null;
 (re_com.modal_panel.modal_panel.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(re_com.modal_panel.modal_panel.cljs$lang$applyTo = (function (seq23945){
+(re_com.modal_panel.modal_panel.cljs$lang$applyTo = (function (seq24391){
 var self__5755__auto__ = this;
-return self__5755__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq23945));
+return self__5755__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq24391));
 }));
 
 

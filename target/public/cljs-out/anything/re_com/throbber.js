@@ -15,14 +15,14 @@ re_com.throbber.throbber_args_desc = ((re_com.config.include_args_desc_QMARK_)?n
  */
 re_com.throbber.throbber = (function re_com$throbber$throbber(var_args){
 var args__5775__auto__ = [];
-var len__5769__auto___19239 = arguments.length;
-var i__5770__auto___19240 = (0);
+var len__5769__auto___19685 = arguments.length;
+var i__5770__auto___19686 = (0);
 while(true){
-if((i__5770__auto___19240 < len__5769__auto___19239)){
-args__5775__auto__.push((arguments[i__5770__auto___19240]));
+if((i__5770__auto___19686 < len__5769__auto___19685)){
+args__5775__auto__.push((arguments[i__5770__auto___19686]));
 
-var G__19241 = (i__5770__auto___19240 + (1));
-i__5770__auto___19240 = G__19241;
+var G__19687 = (i__5770__auto___19686 + (1));
+i__5770__auto___19686 = G__19687;
 continue;
 } else {
 }
@@ -33,18 +33,18 @@ var argseq__5776__auto__ = ((((0) < args__5775__auto__.length))?(new cljs.core.I
 return re_com.throbber.throbber.cljs$core$IFn$_invoke$arity$variadic(argseq__5776__auto__);
 });
 
-(re_com.throbber.throbber.cljs$core$IFn$_invoke$arity$variadic = (function (p__19235){
-var map__19236 = p__19235;
-var map__19236__$1 = cljs.core.__destructure_map.call(null,map__19236);
-var args = map__19236__$1;
-var size = cljs.core.get.call(null,map__19236__$1,new cljs.core.Keyword(null,"size","size",1098693007));
-var color = cljs.core.get.call(null,map__19236__$1,new cljs.core.Keyword(null,"color","color",1011675173));
-var class$ = cljs.core.get.call(null,map__19236__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
-var style = cljs.core.get.call(null,map__19236__$1,new cljs.core.Keyword(null,"style","style",-496642736));
-var attr = cljs.core.get.call(null,map__19236__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
-var parts = cljs.core.get.call(null,map__19236__$1,new cljs.core.Keyword(null,"parts","parts",849007691));
-var src = cljs.core.get.call(null,map__19236__$1,new cljs.core.Keyword(null,"src","src",-1651076051));
-var debug_as = cljs.core.get.call(null,map__19236__$1,new cljs.core.Keyword(null,"debug-as","debug-as",283322354));
+(re_com.throbber.throbber.cljs$core$IFn$_invoke$arity$variadic = (function (p__19681){
+var map__19682 = p__19681;
+var map__19682__$1 = cljs.core.__destructure_map.call(null,map__19682);
+var args = map__19682__$1;
+var size = cljs.core.get.call(null,map__19682__$1,new cljs.core.Keyword(null,"size","size",1098693007));
+var color = cljs.core.get.call(null,map__19682__$1,new cljs.core.Keyword(null,"color","color",1011675173));
+var class$ = cljs.core.get.call(null,map__19682__$1,new cljs.core.Keyword(null,"class","class",-2030961996));
+var style = cljs.core.get.call(null,map__19682__$1,new cljs.core.Keyword(null,"style","style",-496642736));
+var attr = cljs.core.get.call(null,map__19682__$1,new cljs.core.Keyword(null,"attr","attr",-604132353));
+var parts = cljs.core.get.call(null,map__19682__$1,new cljs.core.Keyword(null,"parts","parts",849007691));
+var src = cljs.core.get.call(null,map__19682__$1,new cljs.core.Keyword(null,"src","src",-1651076051));
+var debug_as = cljs.core.get.call(null,map__19682__$1,new cljs.core.Keyword(null,"debug-as","debug-as",283322354));
 var or__5045__auto__ = (((!(goog.DEBUG)))?null:re_com.validate.validate_args.call(null,re_com.validate.extract_arg_data.call(null,re_com.throbber.throbber_args_desc),args));
 if(cljs.core.truth_(or__5045__auto__)){
 return or__5045__auto__;
@@ -58,9 +58,9 @@ return or__5045__auto____$1;
 } else {
 return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"component","component",1555936782),re_com.debug.short_component_name.call(null,reagent.impl.component.component_name.call(null,reagent.core.current_component.call(null))),new cljs.core.Keyword(null,"args","args",1315556576),args], null);
 }
-})(),new cljs.core.Keyword(null,"class","class",-2030961996),["rc-throbber-wrapper ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.get_in.call(null,parts,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"wrapper","wrapper",-969103524),new cljs.core.Keyword(null,"class","class",-2030961996)], null)))].join(''),new cljs.core.Keyword(null,"style","style",-496642736),cljs.core.get_in.call(null,parts,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"wrapper","wrapper",-969103524),new cljs.core.Keyword(null,"style","style",-496642736)], null)),new cljs.core.Keyword(null,"attr","attr",-604132353),cljs.core.get_in.call(null,parts,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"wrapper","wrapper",-969103524),new cljs.core.Keyword(null,"attr","attr",-604132353)], null)),new cljs.core.Keyword(null,"align","align",1964212802),new cljs.core.Keyword(null,"start","start",-355208981),new cljs.core.Keyword(null,"child","child",623967545),new cljs.core.PersistentVector(null, 10, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ul","ul",-1349521403),cljs.core.merge.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),["loader rc-throbber ",cljs.core.str.cljs$core$IFn$_invoke$arity$1((function (){var G__19238 = size;
-var G__19238__$1 = (((G__19238 instanceof cljs.core.Keyword))?G__19238.fqn:null);
-switch (G__19238__$1) {
+})(),new cljs.core.Keyword(null,"class","class",-2030961996),["rc-throbber-wrapper ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.get_in.call(null,parts,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"wrapper","wrapper",-969103524),new cljs.core.Keyword(null,"class","class",-2030961996)], null)))].join(''),new cljs.core.Keyword(null,"style","style",-496642736),cljs.core.get_in.call(null,parts,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"wrapper","wrapper",-969103524),new cljs.core.Keyword(null,"style","style",-496642736)], null)),new cljs.core.Keyword(null,"attr","attr",-604132353),cljs.core.get_in.call(null,parts,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"wrapper","wrapper",-969103524),new cljs.core.Keyword(null,"attr","attr",-604132353)], null)),new cljs.core.Keyword(null,"align","align",1964212802),new cljs.core.Keyword(null,"start","start",-355208981),new cljs.core.Keyword(null,"child","child",623967545),new cljs.core.PersistentVector(null, 10, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ul","ul",-1349521403),cljs.core.merge.call(null,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"class","class",-2030961996),["loader rc-throbber ",cljs.core.str.cljs$core$IFn$_invoke$arity$1((function (){var G__19684 = size;
+var G__19684__$1 = (((G__19684 instanceof cljs.core.Keyword))?G__19684.fqn:null);
+switch (G__19684__$1) {
 case "regular":
 return "";
 
@@ -88,9 +88,9 @@ return "";
 (re_com.throbber.throbber.cljs$lang$maxFixedArity = (0));
 
 /** @this {Function} */
-(re_com.throbber.throbber.cljs$lang$applyTo = (function (seq19234){
+(re_com.throbber.throbber.cljs$lang$applyTo = (function (seq19680){
 var self__5755__auto__ = this;
-return self__5755__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19234));
+return self__5755__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq19680));
 }));
 
 
