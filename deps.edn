@@ -27,4 +27,7 @@
         ;; optional but recommended
         com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}}
  :paths ["src" "target" "resources"]
- :aliases {:fig {:main-opts ["-m" "figwheel.main"]}}}
+ :aliases {:fig {:main-opts ["-m" "figwheel.main"]}
+           :build {:main-opts ["-m" "figwheel.main" "-b" "anything" "-r"]}
+           }}
+

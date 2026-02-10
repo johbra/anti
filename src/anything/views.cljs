@@ -54,8 +54,8 @@
 (defn customer
   [cust]
   [v-box :children
-   [[h-box :children [[box :size "80px" :child "first-name: "]    (:first-name cust)]]
-    [h-box :children [[box :size "80px" :child "last-name: "]    (:last-name cust)]]
+   [[h-box :children [[box :size "80px" :child "first-name: "] (:first-name cust)]]
+    [h-box :children [[box :size "80px" :child "last-name: "]  (:last-name cust)]]
     [h-box :children [[box :size "80px" :child "company: "]    (:company cust)]]
     [h-box :children [[box :size "80px" :child "address. "]
                       [hyperlink :style {:color "blue"}
@@ -112,7 +112,9 @@
           [hyperlink :style {:color "blue"}
            :label (str (:first-name (:customer inv)) " "(:last-name (:customer inv)))
            :on-click #(rf/dispatch [:selected-customer (:customer inv)])]]])
-      ]]))(defn select-box
+      ]]))
+
+(defn select-box
   [lable values selected-value callback-fn]
   [v-box
    :gap "5px"
@@ -136,8 +138,7 @@
         selctd-cuad @(rf/subscribe [:selected-cust-adr])
         _ nil #_(println invcs)]
     [v-box :gap "12pt" :children
-     [[:h1 "A-Beispiel aus P-Schrift"]
-                                        ;[h-box :gap "12pt" :children
+     [[:h1 "A-Beispiel aus P-Schrift"]      
       [h-box :gap "12pt" :children
        [(select-box "Invoices" (vec (keys invcs)) selctd-inv 
                     #(rf/dispatch [:select-invoice (first (vals %))])) 
