@@ -1,0 +1,24 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ [[re-frame "1.4.4"]
+  [reagent "1.2.0"]
+  [com.andrewmcveigh/cljs-time "0.5.2"]
+  [re-com "2.29.0"]]
+
+ :dev-http
+ {8020 "public"}
+
+ :builds
+ {:app
+  {:target :browser
+   :output-dir "public/js"
+   :asset-path "/js"
+
+   :modules
+   {:main; becomes public/js/main.js
+    {:init-fn anything.core/run}}}}}
