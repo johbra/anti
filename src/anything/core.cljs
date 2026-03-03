@@ -10,28 +10,6 @@
 (defonce root-container
   (rdc/create-root (js/document.getElementById "app")))
 
-;; ;; start is called by init and after code reloading finishes
-;; (defn ^:dev/after-load start []
-;;   (js/console.log "start")
-;;   (db/product-flows)
-;;   (db/invoice-sum-flows)
-;;   (db/invoice-field-flows :VAT db/vat)
-;;   (db/invoice-field-flows :totals db/totals)
-;;   (rdc/render root-container [av/ui]))
-
-
-;; (defn init []
-;;   ;; init is called ONCE when the page loads
-;;   ;; this is called in the index.html and must be exported
-;;   ;; so it is available even in :advanced release builds
-;;   (js/console.log "init")
-;;   (rf/clear-subscription-cache!)
-;;   (start))
-
-;; ;; this is called before any code is reloaded
-;; (defn ^:dev/before-load stop []
-;;   (js/console.log "stop"))
-
 (defn main     ;; call this to bootstrap your app
   [] 
   (db/product-flows)

@@ -43,6 +43,7 @@
      :selected-customer nil}))
 
 (defn product-flow
+  ;; Definition der Abhängigkeit :total = f(:price, :amount)
   [invoice-key product-key] 
   (when (:items (invoice-key (:invoices default-db)))
     (rf/reg-flow (keyword (str (name invoice-key) "-" (name product-key)))
@@ -52,6 +53,7 @@
                   :path   [:invoices invoice-key :items product-key :total]})))
 
 (defn product-flows
+  ;; erzeugt die "product-flows" für alle products aller invoices
   []
   (let [invoices (:invoices default-db)
         invs (vec (keys invoices)) 
@@ -59,6 +61,7 @@
     (doseq [x ips] (doseq [y (second x)] (product-flow (first x) y)))))
 
 (defn invoice-sum-flow
+  ;; Definition der Abhängikeit :Sum = f(product-:totals)
   [invoice-key]
   (when (:items (invoice-key (:invoices default-db)))
     (let [p-keys (vec (keys (get-in default-db [:invoices invoice-key :items])))
@@ -71,11 +74,13 @@
                     :path   [:invoices invoice-key :Sum ]}))))
 
 (defn invoice-sum-flows
+  ;; erzeugt die invoice-sum-flows für alle invoices
   []
   (let [inv-keys (vec (keys (:invoices default-db)))]
     (doseq [i inv-keys] (invoice-sum-flow i))))
 
 (defn invoice-field-flow
+  ;; Definition der Abhängigkeiten verschiedener invoice-fields von :Sum
   [invoice-key field f ]  
   (when (:items (invoice-key (:invoices default-db)))
     (rf/reg-flow (keyword (str (name invoice-key) "-" (name field)))
@@ -90,6 +95,7 @@
               (.toLocaleString (* 1.19 sum) "de-DE" #js [])))
 
 (defn invoice-field-flows
+  ;; erzeugt die invoice-field-flows für alle invoices
   [field f]
   (let [inv-keys (vec (keys (:invoices default-db)))]
     (doseq [i inv-keys]
